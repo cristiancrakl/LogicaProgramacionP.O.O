@@ -5,20 +5,20 @@ import java.util.Set;
 public class Isograma {
 
     public static boolean esIsograma(String input) {
-        // Limpiar el input
+        // limpiar el input
         if (input == null || input.trim().isEmpty()) {
-            return true; // Un string vacío es un isograma
+            return true; // un string vacío es un isograma
         }
 
-        // Convertir a minúsculas y eliminar acentos
+        // convertir a minúsculas y eliminar acentos
         String cleanedInput = normalizeString(input.toLowerCase());
 
-        // Verificar si hay más de una palabra
+        // verificar si hay más de una palabra
         if (cleanedInput.split("\\s+").length > 1) {
             return false; // Más de una palabra
         }
 
-        // Usar un Set para verificar letras repetidas
+        // usar un Set para verificar letras repetidas
         Set<Character> charSet = new HashSet<>();
         for (char c : cleanedInput.toCharArray()) {
             if (charSet.contains(c)) {
@@ -27,13 +27,13 @@ public class Isograma {
             charSet.add(c);
         }
 
-        return true; // Es un isograma
+        return true; // es un isograma
     }
 
     private static String normalizeString(String input) {
-        // Normaliza el string para eliminar acentos
+        // normalizar el string para eliminar acentos
         String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
-        return normalized.replaceAll("[^\\p{ASCII}]", ""); // Eliminar caracteres no ASCII
+        return normalized.replaceAll("[^\\p{ASCII}]", ""); // eliminar caracteres no ASCII
     }
 
     public static void main(String[] args) {

@@ -21,14 +21,14 @@ public class letrasPorNumeros {
             }
         }
 
-        // Elimino el espacio final y retorno el resultado
+        // elimino el espacio final y retorno el resultado
         return resultado.toString().trim();
     }
 
     private static String limpiarCadena(String entrada) {
-        // Normalizo la cadena para eliminar acentos
+        // normalizo la cadena para eliminar acentos
         String normalizada = Normalizer.normalize(entrada, Normalizer.Form.NFD);
-        // Elimino caracteres que no sean del alfabeto y espacios
+        // elimino caracteres que no sean del alfabeto y espacios
         String cadenaLimpia = normalizada.replaceAll("[^a-zA-Z]", "");
         return cadenaLimpia;
     }

@@ -4,7 +4,7 @@ public class StringTerminaCon {
     }
 
     public static void main(String[] args) {
-        // Ejemplos de uso
+        // ejemplos de uso
         System.out.println(func("abc", "bc")); // retorna verdadero
         System.out.println(func("abc", "d"));  // retorna falso
     }
