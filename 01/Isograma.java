@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class Isograma {
 
-    public static boolean isIsograma(String input) {
+    public static boolean esIsograma(String input) {
         // Limpiar el input
         if (input == null || input.trim().isEmpty()) {
             return true; // Un string vacío es un isograma
@@ -37,12 +37,15 @@ public class Isograma {
     }
 
     public static void main(String[] args) {
-        System.out.println(isIsograma("Murciélago")); // true
-        System.out.println(isIsograma("reto")); // true
-        System.out.println(isIsograma("Casa")); // false
-        System.out.println(isIsograma("PeRrO")); // false
-        System.out.println(isIsograma("GaTo")); // true
-        System.out.println(isIsograma("")); // true
-        System.out.println(isIsograma("Hola Mundo")); // false
+        System.out.println(esIsograma("Murciélago")); // true
+        System.out.println(esIsograma("reto")); // true
+        System.out.println(esIsograma("Casa")); // false
+        System.out.println(esIsograma("PeRrO")); // false
+        System.out.println(esIsograma("GaTo")); // true
+        System.out.println(esIsograma("")); // true
+        System.out.println(esIsograma("Hola Mundo")); // false
+        System.out.println(esIsograma("11")); 
+        System.out.println(esIsograma("")); 
+        
     }
 }

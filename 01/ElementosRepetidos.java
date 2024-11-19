@@ -38,7 +38,7 @@ public class ElementosRepetidos {
     public static void main(String[] args) {
         
         List<Object> lista1 = List.of("A", "B", "A", "C", "C", "C", "C");
-        List<Object> lista2 = List.of(1, 2, 3, 1, 2);
+        List<Object> lista2 = List.of(2,2, 2, 3, 1, 2);
 
         System.out.println(elementosRepetidosPares(lista1, 2)); // -> ["A"]
         System.out.println(elementosRepetidosPares(lista2, 2)); // -> [1, 2]
